@@ -16,7 +16,7 @@
   <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
 
   <!-- Decorative rocket SVG -->
-  <div class="absolute right-[-120px] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+  <div class="absolute right-[-120px] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none fixed">
     <svg width="420" height="420" viewBox="0 0 200 200" fill="none">
       <path d="M100 10 C140 40, 160 100, 100 180 C40 100, 60 40, 100 10Z"
             stroke="white" stroke-width="2" fill="none"/>
@@ -237,30 +237,6 @@
 <!-- FOOTER -->
 <footer class="text-center py-8 text-slate-400">
 </footer>
-<!-- SCROLLING ROCKET -->
-<div id="rocket"
-     class="fixed right-10 bottom-[-140px] w-24 opacity-80 pointer-events-none z-50">
 
-  <svg viewBox="0 0 200 200" class="w-full h-full">
-    <path d="M100 10 C140 40, 160 100, 100 180 C40 100, 60 40, 100 10Z"
-          stroke="white" stroke-width="3" fill="none"/>
-    <circle cx="100" cy="70" r="12" stroke="white" stroke-width="3"/>
-    <path d="M80 150 L100 180 L120 150" stroke="white" stroke-width="3"/>
-  </svg>
-
-</div>
-
-<script>
-  const rocket = document.getElementById("rocket");
-
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-
-    // adjust speed here
-    const move = scrollY * 0.7;
-
-    rocket.style.transform = `translateY(-${move}px)`;
-  });
-</script>
 </body>
 </html>
