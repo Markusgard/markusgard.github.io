@@ -16,7 +16,7 @@
   <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
 
   <!-- Decorative rocket SVG -->
-  <div class="absolute right-[-120px] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+  <div class="absolute right-[-120px] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none" id="rocket">
     <img src="images/rocket.png" alt="rocket">
   </div>
 
@@ -227,6 +227,18 @@
 <!-- FOOTER
 <footer class="text-center py-8 text-slate-400">
 </footer> -->
+<script>
+const rocket = document.getElementById("rocket");
 
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // adjust speed here (smaller = slower movement)
+  const speed = 0.25;
+
+  rocket.style.transform =
+    `translateY(calc(-50% - ${scrollY * speed}px))`;
+});
+</script>
 </body>
 </html>
