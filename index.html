@@ -237,6 +237,30 @@
 <!-- FOOTER -->
 <footer class="text-center py-8 text-slate-400">
 </footer>
+<!-- SCROLLING ROCKET -->
+<div id="rocket"
+     class="fixed right-10 bottom-[-140px] w-24 opacity-80 pointer-events-none z-50">
 
+  <svg viewBox="0 0 200 200" class="w-full h-full">
+    <path d="M100 10 C140 40, 160 100, 100 180 C40 100, 60 40, 100 10Z"
+          stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="100" cy="70" r="12" stroke="white" stroke-width="3"/>
+    <path d="M80 150 L100 180 L120 150" stroke="white" stroke-width="3"/>
+  </svg>
+
+</div>
+
+<script>
+  const rocket = document.getElementById("rocket");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    // adjust speed here
+    const move = scrollY * 0.7;
+
+    rocket.style.transform = `translateY(-${move}px)`;
+  });
+</script>
 </body>
 </html>
