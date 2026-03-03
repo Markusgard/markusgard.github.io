@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markus Solgård – Profil</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .reveal-section .reveal-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal-section.active .reveal-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger effect */
+  .reveal-section.active .reveal-card:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .reveal-section.active .reveal-card:nth-child(2) {
+    transition-delay: 0.25s;
+  }
+  .reveal-section.active .reveal-card:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+</style>
 </head>
 
 <body class="bg-slate-900 text-white font-sans">
@@ -79,7 +102,7 @@
 
 
 <!-- FERDIGHETER -->
-<section class="py-20 px-6">
+<section class="py-20 px-6 relative reveal-section">
   <div class="max-w-4xl mx-auto">
 
     <h2 class="text-3xl font-bold mb-10 text-center ">
@@ -89,7 +112,7 @@
     <div class="grid md:grid-cols-2 gap-12 text-slate-300 items-start max-w-3xl mx-auto">
 
       <!-- Programming -->
-      <div>
+      <div class="reveal-card">
         <h3 class="text-xl font-semibold text-white mb-4 ">
           Programmeringsspråk
         </h3>
