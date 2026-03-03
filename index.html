@@ -3,97 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markus Solgård – Mission Profile</title>
-
+  <title>Markus Solgård – Profil</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    body {
-      background-color: #020617;
-    }
-
-    /* Rocket GUI badge style */
-    .hero-badge {
-      padding: 6px 14px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      background: rgba(0, 255, 170, 0.08);
-      color: #00ffaa;
-      border: 1px solid rgba(0, 255, 170, 0.4);
-      border-radius: 6px;
-      text-transform: uppercase;
-      font-family: "Courier New", monospace;
-      transition: 0.25s ease;
-    }
-
-    .hero-badge:hover {
-      background: rgba(0, 255, 170, 0.15);
-      box-shadow: 0 0 10px rgba(0, 255, 170, 0.6);
-    }
-
-    /* Status indicator */
-    .status-dot {
-      height: 10px;
-      width: 10px;
-      background-color: #00ffaa;
-      border-radius: 50%;
-      display: inline-block;
-      box-shadow: 0 0 8px #00ffaa;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
-    }
-
-    /* Subtle grid background */
-    .grid-overlay {
-      background-image:
-        linear-gradient(to right, rgba(0,255,170,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,255,170,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-  </style>
+  .hero-badge {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 999px;
+    transition: 0.25s ease;
+  }
+</style>
 </head>
 
-<body class="text-white font-sans">
+<body class="bg-slate-900 text-white font-sans">
 
 <!-- HERO -->
 <section class="min-h-screen flex items-center px-6 relative overflow-hidden">
 
-  <!-- Background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#0a0f1c] via-[#0f172a] to-[#020617]"></div>
-  <div class="absolute inset-0 grid-overlay pointer-events-none"></div>
+  <!-- Rocket background glow -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
 
-  <!-- Rocket image -->
-  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2 opacity-20 pointer-events-none" id="rocket">
+  <!-- Decorative rocket SVG -->
+  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2  opacity-20 pointer-events-none" id="rocket">
     <img src="images/rocket.png" alt="rocket">
   </div>
 
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
 
-    <!-- LEFT -->
+    <!-- LEFT: TEXT -->
     <div class="text-center md:text-left">
 
-      <div class="mb-4 flex items-center gap-3 justify-center md:justify-start">
-        <span class="status-dot"></span>
-        <span class="text-sm tracking-widest text-[#00ffaa] font-mono">
-          SYSTEM STATUS: NOMINAL
-        </span>
-      </div>
-
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 ">
         Markus Solgård
       </h1>
 
-      <p class="text-2xl text-[#00ffaa] font-semibold mb-6 tracking-wide">
-        Developer • Aerospace Systems • Datateknologistudent
+      <p class="text-2xl text-indigo-400 font-semibold mb-4">
+        Utvikler og datateknologistudent
       </p>
 
-      <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
+      <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
         <span class="hero-badge">C#</span>
         <span class="hero-badge">React</span>
         <span class="hero-badge">Python</span>
@@ -102,45 +54,168 @@
         <span class="hero-badge">MATLAB</span>
       </div>
 
-      <p class="text-slate-300 max-w-xl mb-8 leading-relaxed">
-        Jeg utvikler systemer med fokus på struktur, ytelse og brukeropplevelse.
-        Jobber med GUI-utvikling for rakettoppskytning i UiS Aerospace
-        og bygger løsninger som faktisk brukes.
+      <p class="text-lg text-slate-300 max-w-xl mb-6 ">
+        Jeg utvikler løsninger som kombinerer teknologi, brukeropplevelse og struktur.
+        Jobber i UiS Aerospace og liker å bygge systemer som faktisk brukes.
       </p>
 
       <a href="#kontakt"
-         class="inline-block bg-[#00ffaa] text-black px-6 py-3 rounded-md font-semibold hover:bg-[#00dd99] transition">
+         class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold transition">
         Kontakt meg
       </a>
 
     </div>
 
-    <!-- RIGHT -->
+    <!-- RIGHT: PROFILE IMAGE -->
     <div class="flex justify-center md:justify-end">
+
       <img src="images/profil.jpg"
            alt="Profilbilde Markus"
-           class="w-64 h-64 object-cover rounded-lg shadow-2xl border border-[#00ffaa]/30">
+           class="w-64 h-64 object-cover rounded-2xl shadow-2xl border border-slate-700">
+
     </div>
+
+  </div>
+
+</section>
+<!-- OM MEG -->
+<section class="py-20 bg-slate-800 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+
+    <h2 class="text-3xl font-bold mb-6 ">Om meg</h2>
+    
+    <p class="text-slate-300 leading-relaxed">
+      Jeg studerer datateknologi ved Universitetet i Stavanger og jobber i teamet UiS Aerospace
+      hvor jeg utvikler GUI til Phoenix 2-raketten.  
+      Jeg har erfaring både fra programvareutvikling og kundearbeid, og er god til å forklare
+      tekniske løsninger på en forståelig måte.
+    </p>
+    <div>
+      <img src="images/Aerospace_logo.png" alt="UiS Aerospace logo" class="mt-8 w-64 mx-auto">
+    </div>
+    
 
   </div>
 </section>
 
 
-<!-- OM MEG -->
-<section class="py-20 px-6 bg-[#0f172a]">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6 text-[#00ffaa] tracking-widest font-mono">
-      MISSION PROFILE
+<!-- FERDIGHETER -->
+<section class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+
+    <h2 class="text-3xl font-bold mb-10 text-center ">
+      Teknologier og ferdigheter
     </h2>
 
-    <p class="text-slate-300 leading-relaxed">
-      Datateknologistudent ved Universitetet i Stavanger.
-      Utvikler GUI for Phoenix 2-raketten i UiS Aerospace.
-      Kombinerer systemtenkning, programvareutvikling og teknisk struktur.
-    </p>
+    <div class="grid md:grid-cols-2 gap-12 text-slate-300 items-start max-w-3xl mx-auto">
 
-    <img src="images/Aerospace_logo.png" alt="UiS Aerospace logo"
-         class="mt-10 w-48 mx-auto opacity-80">
+      <!-- Programming -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 ">
+          Programmeringsspråk
+        </h3>
+        <ul class="space-y-2 list-disc list-inside ">
+            <li>C#</li>
+            <li>Python</li>
+            <li>MATLAB</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>HTML & CSS</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 ">
+          Webutvikling og Rammeverk
+        </h3>
+        <ul class="space-y-2 list-disc list-inside ">
+            <li>React</li>
+            <li>.NET SDK</li>
+            <li>ASP.NET Core</li>
+            <li>Flask</li>
+            <li>Utvikling av webapplikasjoner</li>
+        </ul>
+      </div>
+
+      <!-- Other -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 ">
+          Generelle ferdigheter
+        </h3>
+        <ul class="space-y-2 list-disc list-inside ">
+            <li>Git & GitHub</li>
+            <li>Teknisk feilsøking</li>
+            <li>Kundekommunikasjon</li>
+            <li>Problemløsning</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROSJEKTER -->
+<section class="py-20 bg-slate-800 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+
+    <h2 class="text-3xl font-bold mb-10 ">Prosjekter</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Project 1 -->
+      <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+        <img src="images/GUI.png" alt="UiS Aerospace GUI"
+             class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3">UiS Aerospace GUI</h3>
+          <p class="text-slate-300 mb-5 ">
+            GUI for styring av rakettoppskytning utviklet i samarbeid med UiS Aerospace.
+          </p>
+          <a href="https://github.com/LBerntsen/bachelor-aerospace-gui"
+             target="_blank"
+             class="inline-block bg-blue-600 hover:bg-blue-500 px-5 py-2 rounded-lg font-medium transition">
+            Se prosjekt
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+        <img src="images/logo.png" alt="Boardgame Cafe App"
+             class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3">Boardgame Café Webapp</h3>
+          <p class="text-slate-300 mb-5">
+            Fullstack løsning bygget med .NET og PostgreSQL for bord- og spillbestilling.
+          </p>
+          <a href="https://github.com/dat240-2025/THELSS-group"
+             target="_blank"
+             class="inline-block bg-blue-600 hover:bg-blue-500 px-5 py-2 rounded-lg font-medium transition">
+            Se prosjekt
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+        <img src="images/python.png" alt="Python learning platform"
+             class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3">Python Læringsplattform</h3>
+          <p class="text-slate-300 mb-5 ">
+            Nettplattform hvor studenter løser Python-oppgaver og konkurrerer på leaderboard.
+          </p>
+          <a href="https://github.com/Markusgard/Python-Tester-Website-Basic"
+             target="_blank"
+             class="inline-block bg-blue-600 hover:bg-blue-500 px-5 py-2 rounded-lg font-medium transition">
+            Se prosjekt
+          </a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
@@ -148,29 +223,44 @@
 <!-- KONTAKT -->
 <section id="kontakt" class="py-20 px-6">
   <div class="max-w-xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6 text-[#00ffaa] tracking-widest font-mono">
-      CONTACT TERMINAL
-    </h2>
 
-    <p class="text-slate-300 mb-2">Sandnes, Norge</p>
-    <p class="text-slate-300 mb-2">markus.solgard@gmail.com</p>
-    <p class="text-slate-300 mb-2">linkedin.com/in/markus-solgard</p>
-    <p class="text-slate-300">github.com/Markusgard</p>
+    <h2 class="text-3xl font-bold mb-6 ">Kontakt</h2>
+
+    <p class="text-slate-300 mb-4 ">
+      Sandnes, Norge
+    </p>
+
+    <p class="mb-2">
+      markus.solgard@gmail.com
+    </p>
+
+    <p class="mb-2">
+      linkedin.com/in/markus-solgard
+    </p>
+
+    <p>
+      github.com/Markusgard
+    </p>
+
   </div>
 </section>
 
 
-<!-- ROCKET PARALLAX -->
+<!-- FOOTER
+<footer class="text-center py-8 text-slate-400">
+</footer> -->
 <script>
 const rocket = document.getElementById("rocket");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
-  const speed = 0.8;
+
+  // adjust speed here (smaller = slower movement)
+  const speed = 1
+
   rocket.style.transform =
     `translateY(calc(-50% - ${scrollY * speed}px))`;
 });
 </script>
-
 </body>
 </html>
