@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markus Solgård – Profil</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .hero-badge {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 999px;
+    transition: 0.25s ease;
+  }
+</style>
 </head>
 
 <body class="bg-slate-900 text-white font-sans">
@@ -16,13 +28,8 @@
   <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
 
   <!-- Decorative rocket SVG -->
-  <div class="absolute right-[-120px] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
-    <svg width="420" height="420" viewBox="0 0 200 200" fill="none">
-      <path d="M100 10 C140 40, 160 100, 100 180 C40 100, 60 40, 100 10Z"
-            stroke="white" stroke-width="2" fill="none"/>
-      <circle cx="100" cy="70" r="12" stroke="white" stroke-width="2"/>
-      <path d="M80 150 L100 180 L120 150" stroke="white" stroke-width="2"/>
-    </svg>
+  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2  opacity-20 pointer-events-none" id="rocket">
+    <img src="images/rocket.png" alt="rocket">
   </div>
 
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
@@ -30,17 +37,25 @@
     <!-- LEFT: TEXT -->
     <div class="text-center md:text-left">
 
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 ">
         Markus Solgård
       </h1>
 
       <p class="text-2xl text-indigo-400 font-semibold mb-4">
-        Utvikler og datateknologistudent
+        Utvikler - UiS Aerospace - datateknologistudent
       </p>
 
-      <p class="text-lg text-slate-300 max-w-xl mb-6">
-        Jeg utvikler løsninger som kombinerer teknologi, brukeropplevelse og struktur.
-        Jobber i UiS Aerospace og liker å bygge systemer som faktisk brukes.
+      <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
+        <span class="hero-badge">C#</span>
+        <span class="hero-badge">React</span>
+        <span class="hero-badge">Python</span>
+        <span class="hero-badge">JavaScript</span>
+        <span class="hero-badge">SQL</span>
+        <span class="hero-badge">MATLAB</span>
+      </div>
+
+      <p class="text-lg text-slate-300 max-w-xl mb-6 ">
+        Jeg er en student fra Sandnes som snart fullfører bachelorgraden min. Ved siden av studiene jobber jeg i UiS Aerospace, hvor vi utvikler en rakett som skal skytes opp i verdensrommet. Jeg har stor interesse for teknologi, raketter og videospill, og har erfaring med både frontend og backend-utvikling.
       </p>
 
       <a href="#kontakt"
@@ -57,7 +72,7 @@
     <!-- RIGHT: PROFILE IMAGE -->
     <div class="flex justify-center md:justify-end">
 
-      <img src="images/profilbilde.jpg"
+      <img src="images/profil.jpg"
            alt="Profilbilde Markus"
            class="w-64 h-64 object-cover rounded-2xl shadow-2xl border border-slate-700">
 
@@ -70,17 +85,31 @@
 <section class="py-20 bg-slate-800 px-6">
   <div class="max-w-3xl mx-auto text-center">
 
-    <h2 class="text-3xl font-bold mb-6">Om meg</h2>
+    <h2 class="text-3xl font-bold mb-6 text-white">Om meg</h2>
     
-    <p class="text-slate-300 leading-relaxed">
+    <p class="text-slate-300 leading-relaxed mb-8">
       Jeg studerer datateknologi ved Universitetet i Stavanger og jobber i teamet UiS Aerospace
-      hvor jeg utvikler GUI til Phoenix 2-raketten.  
+      hvor jeg utvikler programvare for Phoenix 2-raketten.  
       Jeg har erfaring både fra programvareutvikling og kundearbeid, og er god til å forklare
       tekniske løsninger på en forståelig måte.
     </p>
-    <img src="images/Aerospace_logo.png"
-           alt="UiS Aerospace logo"
-           class="mt-8 w-64 mx-auto">
+
+    <a 
+      href="https://www.uisaerospace.no"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold transition duration-300 ease-in-out shadow-md hover:shadow-lg"
+    >
+      Besøk UiS Aerospace
+    </a>
+
+    <div>
+      <img 
+        src="images/Aerospace_logo.png" 
+        alt="UiS Aerospace logo" 
+        class="mt-10 w-64 mx-auto opacity-90 hover:opacity-100 transition duration-300"
+      >
+    </div>
 
   </div>
 </section>
@@ -90,7 +119,7 @@
 <section class="py-20 px-6">
   <div class="max-w-4xl mx-auto">
 
-    <h2 class="text-3xl font-bold mb-10 text-center">
+    <h2 class="text-3xl font-bold mb-10 text-center ">
       Teknologier og ferdigheter
     </h2>
 
@@ -98,10 +127,10 @@
 
       <!-- Programming -->
       <div>
-        <h3 class="text-xl font-semibold text-white mb-4">
+        <h3 class="text-xl font-semibold text-white mb-4 ">
           Programmeringsspråk
         </h3>
-        <ul class="space-y-2 list-disc list-inside">
+        <ul class="space-y-2 list-disc list-inside ">
             <li>C#</li>
             <li>Python</li>
             <li>MATLAB</li>
@@ -112,10 +141,10 @@
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold text-white mb-4">
+        <h3 class="text-xl font-semibold text-white mb-4 ">
           Webutvikling og Rammeverk
         </h3>
-        <ul class="space-y-2 list-disc list-inside">
+        <ul class="space-y-2 list-disc list-inside ">
             <li>React</li>
             <li>.NET SDK</li>
             <li>ASP.NET Core</li>
@@ -126,10 +155,10 @@
 
       <!-- Other -->
       <div>
-        <h3 class="text-xl font-semibold text-white mb-4">
+        <h3 class="text-xl font-semibold text-white mb-4 ">
           Generelle ferdigheter
         </h3>
-        <ul class="space-y-2 list-disc list-inside">
+        <ul class="space-y-2 list-disc list-inside ">
             <li>Git & GitHub</li>
             <li>Teknisk feilsøking</li>
             <li>Kundekommunikasjon</li>
@@ -146,7 +175,7 @@
 <section class="py-20 bg-slate-800 px-6">
   <div class="max-w-5xl mx-auto text-center">
 
-    <h2 class="text-3xl font-bold mb-10">Prosjekter</h2>
+    <h2 class="text-3xl font-bold mb-10 ">Prosjekter</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
 
@@ -156,7 +185,7 @@
              class="w-full h-48 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-3">UiS Aerospace GUI</h3>
-          <p class="text-slate-300 mb-5">
+          <p class="text-slate-300 mb-5 ">
             GUI for styring av rakettoppskytning utviklet i samarbeid med UiS Aerospace.
           </p>
           <a href="https://github.com/LBerntsen/bachelor-aerospace-gui"
@@ -190,7 +219,7 @@
              class="w-full h-48 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-3">Python Læringsplattform</h3>
-          <p class="text-slate-300 mb-5">
+          <p class="text-slate-300 mb-5 ">
             Nettplattform hvor studenter løser Python-oppgaver og konkurrerer på leaderboard.
           </p>
           <a href="https://github.com/Markusgard/Python-Tester-Website-Basic"
@@ -211,9 +240,9 @@
 <section id="kontakt" class="py-20 px-6">
   <div class="max-w-xl mx-auto text-center">
 
-    <h2 class="text-3xl font-bold mb-6">Kontakt</h2>
+    <h2 class="text-3xl font-bold mb-6 ">Kontakt</h2>
 
-    <p class="text-slate-300 mb-4">
+    <p class="text-slate-300 mb-4 ">
       Sandnes, Norge
     </p>
 
@@ -236,6 +265,18 @@
 <!-- FOOTER
 <footer class="text-center py-8 text-slate-400">
 </footer> -->
+<script>
+const rocket = document.getElementById("rocket");
 
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // adjust speed here (smaller = slower movement)
+  const speed = 1
+
+  rocket.style.transform =
+    `translateY(calc(-50% - ${scrollY * speed}px))`;
+});
+</script>
 </body>
 </html>
