@@ -24,37 +24,28 @@
 <body class="bg-slate-900 text-white font-sans">
 
 
-<section class="min-h-screen flex items-center px-6 relative overflow-hidden">
+<section class="min-h-screen items-center px-6 relative overflow-hidden">
 
-  <!-- Background gradient -->
   <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
 
-  <!-- Glow effect -->
-  <div class="absolute w-[500px] h-[500px] bg-indigo-600 opacity-20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
-
-  <!-- Rocket -->
-  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2 opacity-20 pointer-events-none" id="rocket">
+  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2  opacity-20 pointer-events-none" id="rocket">
     <img src="images/rocket.png" alt="rocket">
   </div>
 
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
 
-    <!-- TEXT -->
+    
     <div class="text-center md:text-left">
 
-      <p class="text-indigo-400 mb-3 tracking-wide uppercase text-sm">
-        Portfolio
-      </p>
-
-      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 ">
         Markus Solgård
       </h1>
 
-      <p class="text-xl text-indigo-300 font-medium mb-6">
-        Utvikler • UiS Aerospace • Datateknologi
+      <p class="text-2xl text-indigo-400 font-semibold mb-4">
+        Utvikler - UiS Aerospace - datateknologistudent
       </p>
 
-      <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
+      <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
         <span class="hero-badge">C#</span>
         <span class="hero-badge">React</span>
         <span class="hero-badge">Python</span>
@@ -64,39 +55,29 @@
         <span class="hero-badge">Typescript</span>
       </div>
 
-      <p class="text-lg text-slate-300 max-w-xl mb-8 leading-relaxed">
-        Jeg er en student fra Sandnes som snart fullfører bachelorgraden min. 
-        Ved siden av studiene jobber jeg i UiS Aerospace, hvor vi utvikler en rakett 
-        som skal skytes opp i verdensrommet.
+      <p class="text-lg text-slate-300 max-w-xl mb-6 ">
+        Jeg er en student fra Sandnes som snart fullfører bachelorgraden min. Ved siden av studiene jobber jeg i UiS Aerospace, hvor vi utvikler en rakett som skal skytes opp i verdensrommet. Jeg har stor interesse for teknologi, raketter og videospill, og har erfaring med både frontend og backend-utvikling.
       </p>
-
-      <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-
+      <div class="flex justify-center md:justify-start gap-4">
         <a href="#kontakt"
-          class="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-indigo-600/30">
+          class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold transition">
           Kontakt meg
         </a>
-
         <a href="/images/Markus_Solgård_CV_2026.pdf" download
-          class="border border-slate-600 hover:border-slate-400 px-6 py-3 rounded-xl font-semibold transition backdrop-blur-sm">
+          class="bg-gray-600 hover:bg-gray-500 px-6 py-3 rounded-xl font-semibold transition">
           Last ned CV
         </a>
-
       </div>
+      
 
     </div>
 
-    <!-- IMAGE -->
+    
     <div class="flex justify-center md:justify-end">
 
-      <div class="relative">
-        <!-- Glow behind image -->
-        <div class="absolute inset-0 bg-indigo-500 blur-2xl opacity-20 rounded-2xl"></div>
-
-        <img src="images/profil.jpg"
-             alt="Profilbilde Markus"
-             class="relative w-72 h-72 object-cover rounded-2xl shadow-2xl border border-slate-700">
-      </div>
+      <img src="images/profil.jpg"
+           alt="Profilbilde Markus"
+           class="w-64 h-64 object-cover rounded-2xl shadow-2xl border border-slate-700">
 
     </div>
 
