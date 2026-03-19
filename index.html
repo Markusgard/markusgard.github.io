@@ -24,11 +24,11 @@
 <body class="bg-slate-900 text-white font-sans">
 
 
-<section class="flex flex-col md:flex-row min-h-screen items-center px-6 relative overflow-hidden">
+<section class="min-h-screen flex items-center px-6 relative overflow-hidden">
 
   <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
 
-  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2  opacity-20 pointer-events-none" id="rocket">
+  <div class="absolute right-[-120px] top-[60%] -translate-y-1/2 opacity-20 pointer-events-none" id="rocket">
     <img src="images/rocket.png" alt="rocket">
   </div>
 
@@ -282,16 +282,12 @@
 </section>
 
 
-<!-- FOOTER
-<footer class="text-center py-8 text-slate-400">
-</footer> -->
 <script>
 const rocket = document.getElementById("rocket");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
-  // adjust speed here (smaller = slower movement)
   const speed = 1
 
   rocket.style.transform =
